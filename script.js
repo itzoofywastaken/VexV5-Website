@@ -1,12 +1,9 @@
-// Animation for buttons and other elements can be added using JavaScript for interactivity
-document.addEventListener('DOMContentLoaded', () => {
-    const ctaButton = document.querySelector('.cta-btn');
-    
-    ctaButton.addEventListener('mouseover', () => {
-        ctaButton.style.transform = "scale(1.1)";
-    });
+// Q&A Section Toggle
+const qaBtns = document.querySelectorAll('.qa-btn');
 
-    ctaButton.addEventListener('mouseout', () => {
-        ctaButton.style.transform = "scale(1)";
+qaBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling;
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
     });
 });
